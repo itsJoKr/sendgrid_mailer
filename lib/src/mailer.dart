@@ -16,6 +16,7 @@ class Mailer {
     var headers = Map<String, String>();
     headers['Authorization'] = 'Bearer $_apiKey';
     headers['Content-Type'] = 'application/json';
+    headers['Access-Control-Allow-Origin'] = '*';
 
     final response = await http.post(
       Uri.parse(_apiURL),
